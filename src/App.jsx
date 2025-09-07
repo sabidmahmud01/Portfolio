@@ -19,7 +19,8 @@ const PROFILE = {
   email: "sabidmahmud01@gmail.com",
   github: "https://github.com/sabidmahmud01",
   linkedin: "https://www.linkedin.com/in/sabidmahmud01",
-  x: "",
+  handshake: "https://txstate.joinhandshake.com/profiles/uqytf2",
+  photo: `${import.meta.env.BASE_URL}headshot.jpg`
 };
 
 // ---- Editable projects data ----
