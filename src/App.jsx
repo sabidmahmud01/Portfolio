@@ -11,89 +11,75 @@ import { motion } from "framer-motion";
 
 // ---- Editable profile data ----
 const PROFILE = {
-  name: "Your Name",
-  role: "Computer Science Student · Aspiring SWE (Summer 2026)",
+  name: "Sabid Mahmud",
+  role: "Computer Science Student · Texas State University (’28)",
   summary:
-    "I craft performant, accessible web experiences and love tackling hard systems problems. This is my living portfolio—projects, skills, and proof of work.",
-  location: "Chicago, IL",
-  email: "you@example.com",
-  github: "https://github.com/yourhandle",
-  linkedin: "https://www.linkedin.com/in/yourhandle/",
-  x: "https://x.com/yourhandle",
+    "Computer Science student skilled in C++ with experience in Python, Java, and web technologies. Built real-world CLI systems and a full‑stack notes app; fast learner with leadership and mentoring experience.",
+  location: "Texas, USA",
+  email: "sabidmahmud01@gmail.com",
+  github: "https://github.com/sabidmahmud01",
+  linkedin: "https://www.linkedin.com/in/sabidmahmud01",
+  x: "",
 };
 
 // ---- Editable projects data ----
 const PROJECTS = [
   {
-    title: "Algo Visualizer",
-    tagline: "Interactive pathfinding & sorting visualizations with step-by-step animations.",
-    stack: ["React", "Vite", "Tailwind", "D3"],
+    title: "ThinkBoard (MERN Notes App)",
+    tagline: "Full‑stack notes app with create/read/update/delete, deployed front/back.",
+    stack: ["MongoDB", "Express", "React", "Node.js", "Mongoose"],
     highlights: [
-      "Visualizes BFS/DFS/A*, merge/quick/heap sort",
-      "O(1) state updates via immutable patterns",
-      "100% Lighthouse perf/SEO/accessibility on desktop",
+      "RESTful APIs with Express and MongoDB Atlas",
+      "Reusable React components & hooks; stateful UI",
+      "Error handling middleware & rate limiting; production deploys (Vercel + Render/Heroku)",
     ],
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
-    repo: "https://github.com/yourhandle/algo-visualizer",
-    demo: "https://yourhandle.github.io/algo-visualizer/",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+    repo: "https://github.com/sabidmahmud01", // update to specific repo when available
+    demo: "", // add demo URL if deployed
   },
   {
-    title: "Cloud Cost Watch",
-    tagline: "AWS cost anomaly alerts with serverless pipelines and a compact dashboard.",
-    stack: ["AWS Lambda", "DynamoDB", "SNS", "React"],
+    title: "Portfolio (this site)",
+    tagline: "Next‑Level React + Tailwind portfolio with dark mode and SEO.",
+    stack: ["React", "Vite", "Tailwind", "Framer Motion"],
     highlights: [
-      "Daily aggregation & anomaly detection",
-      "Cost centers, tags, and budgets in one view",
-      "< $1/mo on free tier workloads",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop",
-    repo: "https://github.com/yourhandle/cloud-cost-watch",
-    demo: "https://cloud-cost-watch.vercel.app",
-  },
-  {
-    title: "DevNotes",
-    tagline: "Offline-first markdown notes with full‑text search and keyboard-driven UX.",
-    stack: ["React", "IndexedDB", "WASM", "Tailwind"],
-    highlights: [
-      "Local-first data; sync optional",
-      "Instant search with WASM tokenizer",
-      "Accessible cmd‑K palette",
+      "Responsive, accessible, and fast",
+      "Configurable via PROFILE / PROJECTS data",
+      "Deployed to GitHub Pages",
     ],
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
-    repo: "https://github.com/yourhandle/devnotes",
-    demo: "https://devnotes.app",
+    repo: "https://github.com/sabidmahmud01/Portfolio",
+    demo: `${import.meta.env.BASE_URL}`,
   },
 ];
 
 // ---- Skills ----
 const SKILLS = {
-  Languages: ["Python", "Java", "C/C++", "JavaScript/TypeScript", "SQL"],
-  Frameworks: ["React", "Node", "Express", "Next.js", "Tailwind"],
-  Cloud: ["AWS (S3, Lambda, DynamoDB)", "Docker", "GitHub Actions"],
-  CS: ["Data Structures & Algos", "OS", "Networks", "DBMS", "Distributed Systems basics"],
+  Languages: ["C++", "Python", "Java", "JavaScript"],
+  Frameworks: ["React", "Node", "Express", "REST APIs", "Mongoose"],
+  Cloud: ["MongoDB Atlas", "Git", "Linux/CLI", "Arduino", "Vercel", "Render/Heroku", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+  // Add more categories as needed
 };
 
 // ---- Experience ----
 const EXPERIENCE = [
   {
-    company: "Open Source",
-    role: "Contributor",
-    date: "2024 – Present",
+    company: "Texas State University",
+    role: "New Student Orientation Leader",
+    date: "2024",
     bullets: [
-      "Fixed performance regressions and added test coverage in popular React libs.",
-      "Reviewed PRs and mentored new contributors via issues & discussions.",
+      "Facilitated 24 orientation sessions; delivered presentations and guided incoming students.",
+      "Collaborated with staff and peers to ensure a welcoming, informative experience.",
     ],
   },
   {
-    company: "Campus Dev Club",
-    role: "Project Lead",
-    date: "2023 – 2024",
+    company: "ASIS Robotics Club, Dhaka",
+    role: "Student Robotics Mentor",
+    date: "Aug 2022",
     bullets: [
-      "Shipped a campus events app used by 1k+ students.",
-      "Led weekly standups; CI/CD with GitHub Actions and Vercel.",
+      "Taught Arduino/C++: sensor integration, motor control, and logic design.",
+      "Helped organize internal hackathons to promote STEM learning.",
     ],
   },
 ];
@@ -232,7 +218,7 @@ export default function App() {
           </nav>
           <div className="flex items-center gap-3">
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}CS%20Resume.pdf`}
               className="hidden sm:inline-flex items-center text-sm font-medium rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 px-3 py-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-900"
             >
               Resume
