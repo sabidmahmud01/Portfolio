@@ -208,9 +208,18 @@ export default function App() {
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/30 border-b border-zinc-200/50 dark:border-zinc-800/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="size-8 rounded-xl bg-gradient-to-tr from-indigo-500 via-sky-500 to-emerald-500" />
-            <span className="font-semibold tracking-tight">{PROFILE.name}</span>
-          </div>
+              {PROFILE.photo ? (
+                <img
+                  src={PROFILE.photo}
+                  alt={PROFILE.name}
+                  className="w-8 h-8 rounded-xl object-cover border border-zinc-200/70 dark:border-zinc-800/70"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-500 via-sky-500 to-emerald-500" />
+              )}
+              <span className="font-semibold tracking-tight">{PROFILE.name}</span>
+            </div>
+
           <nav className="hidden sm:flex items-center gap-6">
             <NavLink to="projects">Projects</NavLink>
             <NavLink to="skills">Skills</NavLink>
