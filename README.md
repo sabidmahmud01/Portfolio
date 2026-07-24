@@ -1,35 +1,38 @@
-# 🌐 My Portfolio
+# Sabid Mahmud Portfolio
 
-This is my personal portfolio website where I showcase my projects, skills, and experience as a Computer Science student.  
-Built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion** for smooth animations.
+Personal software engineering portfolio built with React, Vite, Tailwind CSS, and Framer Motion.
 
----
+The site highlights selected projects, technical skills, experience, education, resume access, and contact links. It is designed as a recruiter-facing portfolio with a strong hero section, featured project cards, responsive layout, and polished motion.
 
-## 🚀 Tech Stack
-- ⚛️ [React](https://react.dev/) – component-based UI
-- ⚡ [Vite](https://vitejs.dev/) – lightning-fast dev server & bundler
-- 🎨 [Tailwind CSS](https://tailwindcss.com/) – utility-first styling
-- 🎞️ [Framer Motion](https://www.framer.com/motion/) – animations & transitions
+## Featured Projects
 
----
+- Next Play Task Board
+- AI Resume Analyzer
+- LocalConnect
+- Data Dashboard
+- Crewmates
+- Portfolio Website
 
-## ✨ Features
-- Responsive design (mobile, tablet, desktop)
-- Smooth page transitions and hover effects
-- Sections for:
-  - About Me
-  - Projects
-  - Resume
-  - Contact
-- Easy to extend and customize
+## Tech Stack
 
----
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
 
-## 📦 Installation & Setup
-
-Clone the repository and install dependencies:
+## Run Locally
 
 ```bash
-git clone https://github.com/sabidmahmud01/Portfolio.git
-cd Portfolio
 npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Deploy
+
+This project can be deployed on Vercel, Netlify, or GitHub Pages. The production build outputs to `dist/`.

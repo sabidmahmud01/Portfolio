@@ -1,6 +1,127 @@
 @import "tailwindcss";
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0)),
+    #f5f2ea;
+}
+
+.dark .hero-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+    #080b11;
+}
+
+.project-card {
+  position: relative;
+  display: grid;
+  min-height: 520px;
+  gap: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 212, 216, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 24px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+}
+
+.dark .project-card {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(24, 24, 27, 0.76);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 4px solid var(--accent-color, #0f766e);
+  pointer-events: none;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0 38%, rgba(255, 255, 255, 0.78) 45%, transparent 52% 100%);
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  animation: sheen 900ms ease;
+}
+
+.accent-teal {
+  --accent-color: #0f766e;
+}
+
+.accent-blue {
+  --accent-color: #3157d5;
+}
+
+.accent-gold {
+  --accent-color: #a86813;
+}
+
+.accent-slate {
+  --accent-color: #475569;
+}
+
+.accent-violet {
+  --accent-color: #7552d9;
+}
+
+.accent-green {
+  --accent-color: #13815f;
+}
+
+.text-zinc-650 {
+  color: #4b5563;
+}
+
+.dark .text-zinc-650 {
+  color: #d4d4d8;
+}
+
+@keyframes sheen {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
 }
