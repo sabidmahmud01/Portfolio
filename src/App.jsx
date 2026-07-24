@@ -10,7 +10,7 @@ const PROFILE = {
   email: "sabidmahmud01@gmail.com",
   phone: "(512) 214-0762",
   github: "https://github.com/sabidmahmud01",
-  linkedin: "https://www.linkedin.com/in/sabidmahmud01",
+  linkedin: "https://www.linkedin.com/in/sabid-mahmud-b49a9b331/",
   handshake: "https://txstate.joinhandshake.com/profiles/sabidmahmud",
   photo: `${import.meta.env.BASE_URL}headshot.jpg`,
   resume: `${import.meta.env.BASE_URL}CS%20Resume.pdf`,
