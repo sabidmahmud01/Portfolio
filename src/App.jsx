@@ -190,12 +190,13 @@ const fadeUp = {
 };
 
 const useDarkMode = () => {
-  const [dark, setDark] = useState(() =>
-    typeof window !== "undefined"
-      ? localStorage.getItem("theme") === "dark" ||
-        (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
-      : true
-  );
+  const [dark, setDark] = useState(() => {
+    if (typeof window === "undefined") return true;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") return true;
+    if (savedTheme === "light") return false;
+    return window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? true;
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -407,7 +408,7 @@ export default function App() {
               onClick={() => setDark(!dark)}
               className="rounded-[8px] border border-zinc-300 bg-white/75 px-3 py-2 text-sm font-bold hover:border-teal-700 dark:border-white/15 dark:bg-white/5 dark:hover:border-teal-300"
             >
-              {dark ? "Light" : "Dark"}
+              {dark ? "Light mode" : "Dark mode"}
             </button>
           </div>
         </div>
